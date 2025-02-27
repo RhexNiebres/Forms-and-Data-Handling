@@ -116,3 +116,15 @@ exports.usersDeletePost = (req, res) => {
   usersStorage.deleteUser(req.params.id);
   res.redirect("/");
 };
+
+exports.searchUser = (req, res )  =>{
+  const searchQuery = req.query.q
+  const users = usersStorage.getUsers();
+
+  const filteredUsers = users.filter(user => 
+    user.firstName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    user.lastName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    user.email.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+res.render("search", { title: "Search Results", users: filteredUsers })
+}
