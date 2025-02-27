@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/RhexNiebres/Forms-and-Data-Handling/issues"
   },
-  "homepage": "https://github.com/RhexNiebres/Forms-and-Data-Handling#readme"
+  "homepage": "https://github.com/RhexNiebres/Forms-and-Data-Handling#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1"
+  }
 }
